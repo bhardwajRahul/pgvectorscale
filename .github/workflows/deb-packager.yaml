@@ -23,6 +23,8 @@ jobs:
             minor: 7
           - major: 16
             minor: 3
+          - major: 17
+            minor: 0
         platform:
           - type: amd64
             runs_on: ubuntu-latest
@@ -69,7 +71,7 @@ jobs:
       uses: ./.github/actions/install-pgrx
       with:
         pg-install-dir: ~/${{ env.PG_INSTALL_DIR }}
-        pgrx-version: 0.11.1
+        pgrx-version: 0.12.5
 
     - name: Build Deb
       id: debbuild
